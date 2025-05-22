@@ -3,8 +3,6 @@
 require_once __DIR__ . '/../models/Usuario.php';
 require_once __DIR__ . '/../interfaces/IApiUsable.php';
 
-use Psr\Http\Message\UploadedFileInterface;
-
 class UsuarioController extends Usuario implements IApiUsable
 {
     public function CargarUno($request, $response, $args)

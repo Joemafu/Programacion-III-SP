@@ -102,7 +102,7 @@ $app->group('/productos', function (RouteCollectorProxy $group) {
 $app->run();
 
 // composer update
-// php -S localhost:666
+// php -S localhost:666 router.php
 // token admin Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJyb2wiOiJhZG1pbiJ9.0APX0-RkBFmXdIHrJOMP43hkBf9jqeOdNNPmekoVfMk
 // token vendedor Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJyb2wiOiJ2ZW5kZWRvciJ9.GJQghh2GEo4aGanyBhPCzgWY5OFfdPCpoNNOZrPwj3I
 // token comprador Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJyb2wiOiJjb21wcmFkb3IifQ.FSRh7dd-KT9Cc4u1TrWV3LAWvTOeBWFZfh6ffcvJspQ

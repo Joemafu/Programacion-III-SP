@@ -1,8 +1,5 @@
 <?php
 
-use Slim\Exception\HttpResponseException;
-
-
 class Usuario
 {
     public $id;

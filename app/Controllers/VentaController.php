@@ -1,7 +1,5 @@
 <?php
 
-use function PHPSTORM_META\type;
-
 require_once __DIR__ . '/../models/Venta.php';
 require_once __DIR__ . '/../interfaces/IApiUsable.php';
 
