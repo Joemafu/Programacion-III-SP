@@ -1,0 +1,272 @@
+{
+	"info": {
+		"_postman_id": "2b633eb8-e7d3-43ae-877c-5e61606f00a3",
+		"name": "Segundo parcial",
+		"schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json",
+		"_exporter_id": "11641925"
+	},
+	"item": [
+		{
+			"name": "Login",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "mail",
+							"value": "comprador@mail.com",
+							"type": "text"
+						},
+						{
+							"key": "rol",
+							"value": "comprador",
+							"type": "text"
+						},
+						{
+							"key": "clave",
+							"value": "comprador",
+							"type": "text"
+						}
+					]
+				},
+				"url": "localhost:666/login"
+			},
+			"response": []
+		},
+		{
+			"name": "Alta Producto",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJyb2wiOiJhZG1pbiJ9.0APX0-RkBFmXdIHrJOMP43hkBf9jqeOdNNPmekoVfMk",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "nombre",
+							"value": "bazooka",
+							"type": "text"
+						},
+						{
+							"key": "tipo",
+							"value": "antiaereo",
+							"type": "text"
+						},
+						{
+							"key": "precio",
+							"value": "100",
+							"type": "text"
+						},
+						{
+							"key": "nacionalidad",
+							"value": "EEUU",
+							"type": "text"
+						},
+						{
+							"key": "foto",
+							"type": "file",
+							"src": "/C:/Users/Joe/Desktop/asi ira.png"
+						}
+					]
+				},
+				"url": "localhost:666/productos"
+			},
+			"response": []
+		},
+		{
+			"name": "Consulta Productos",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": "localhost:666/productos"
+			},
+			"response": []
+		},
+		{
+			"name": "Consulta Productos por Nacionalidad",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJyb2wiOiJtb3pvIn0.oiPmBZhCv17iRVfPtghwhSJnDGWT-d87K-Bmgd6O6P8",
+						"type": "text"
+					}
+				],
+				"url": "localhost:666/productos/nacionalidad/francia"
+			},
+			"response": []
+		},
+		{
+			"name": "Consulta Productos por ID",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJyb2wiOiJjb21wcmFkb3IifQ.FSRh7dd-KT9Cc4u1TrWV3LAWvTOeBWFZfh6ffcvJspQ",
+						"type": "text"
+					}
+				],
+				"url": "localhost:666/productos/id/1"
+			},
+			"response": []
+		},
+		{
+			"name": "Alta Venta",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJyb2wiOiJhZG1pbiJ9.0APX0-RkBFmXdIHrJOMP43hkBf9jqeOdNNPmekoVfMk",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "cantidad",
+							"value": "12",
+							"type": "text"
+						},
+						{
+							"key": "idCliente",
+							"value": "6",
+							"type": "text"
+						},
+						{
+							"key": "idProducto",
+							"value": "2",
+							"type": "text"
+						},
+						{
+							"key": "foto",
+							"type": "file",
+							"src": "/C:/Users/Joe/Desktop/asi ira.png"
+						}
+					]
+				},
+				"url": "localhost:666/ventas"
+			},
+			"response": []
+		},
+		{
+			"name": "Consulta Ventas de productos EEUU entre el 13/11 y el 16/11",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJyb2wiOiJhZG1pbiJ9.0APX0-RkBFmXdIHrJOMP43hkBf9jqeOdNNPmekoVfMk",
+						"type": "text"
+					}
+				],
+				"url": "localhost:666/ventas/circunstanciasMuyEspecificas"
+			},
+			"response": []
+		},
+		{
+			"name": "Consulta Clientes por Producto",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJyb2wiOiJhZG1pbiJ9.0APX0-RkBFmXdIHrJOMP43hkBf9jqeOdNNPmekoVfMk",
+						"type": "text"
+					}
+				],
+				"url": "localhost:666/ventas/producto/exocet"
+			},
+			"response": []
+		},
+		{
+			"name": "Borrar por ID",
+			"request": {
+				"method": "DELETE",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJyb2wiOiJhZG1pbiJ9.0APX0-RkBFmXdIHrJOMP43hkBf9jqeOdNNPmekoVfMk",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "id",
+							"value": "1",
+							"type": "text"
+						}
+					]
+				},
+				"url": "localhost:666/borrar"
+			},
+			"response": []
+		},
+		{
+			"name": "Modificar Producto",
+			"request": {
+				"method": "PUT",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJyb2wiOiJhZG1pbiJ9.0APX0-RkBFmXdIHrJOMP43hkBf9jqeOdNNPmekoVfMk",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "id",
+							"value": "2",
+							"type": "text"
+						},
+						{
+							"key": "nombre",
+							"value": "lanzacohetes",
+							"type": "text"
+						},
+						{
+							"key": "tipo",
+							"value": "antiaereo",
+							"type": "text"
+						},
+						{
+							"key": "precio",
+							"value": "100",
+							"type": "text"
+						},
+						{
+							"key": "nacionalidad",
+							"value": "afganistan",
+							"type": "text"
+						}
+					]
+				},
+				"url": "localhost:666/productos"
+			},
+			"response": []
+		},
+		{
+			"name": "CSV Productos",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": "localhost:666/productos/csv"
+			},
+			"response": []
+		}
+	]
+}
