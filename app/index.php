@@ -34,14 +34,6 @@ error_reporting(-1);
 // Habilitar la visualización de errores en pantalla
 ini_set('display_errors', 1);
 
-// Importar la interfaz ResponseInterface del estándar PSR-7 y asignarla como Response
-use Psr\Http\Message\ResponseInterface as Response;
-// Importar la interfaz ServerRequestInterface del estándar PSR-7 y asignarla como Request
-use Psr\Http\Message\ServerRequestInterface as Request;
-// Importar la interfaz RequestHandlerInterface del estándar PSR-15 y asignarla como RequestHandler
-use Psr\Http\Server\RequestHandlerInterface as RequestHandler;
-// Importar la clase Response de Slim PSR-7 y asignarla como ResponseMW para diferenciarla de la interfaz Response
-use Slim\Psr7\Response as ResponseMW;
 // Importar la clase AppFactory de Slim Factory
 use Slim\Factory\AppFactory;
 // Importar la clase RouteCollectorProxy de Slim Routing
@@ -51,13 +43,13 @@ use App\Middlewares\JwtTokenValidatorMiddleware;
 
 // Requerir el archivo autoload.php para cargar las dependencias
 require __DIR__ . '/../vendor/autoload.php';
-require_once './controllers/VentaController.php';
-require_once './controllers/ProductoController.php';
-require_once './controllers/UsuarioController.php';
-require_once './db/AccesoDatos.php';
-require_once './Middlewares/LoginMiddleware.php';
-require_once './Middlewares/JwtTokenGeneratorMiddleware.php';
-require_once './Middlewares/JwtTokenValidatorMiddleware.php';
+require_once __DIR__ . '/controllers/ProductoController.php';
+require_once __DIR__ . '/controllers/UsuarioController.php';
+require_once __DIR__ . '/controllers/VentaController.php';
+require_once __DIR__ . '/db/AccesoDatos.php';
+require_once __DIR__ . '/Middlewares/JwtTokenGeneratorMiddleware.php';
+require_once __DIR__ . '/Middlewares/JwtTokenValidatorMiddleware.php';
+require_once __DIR__ . '/Middlewares/LoginMiddleware.php';
 
 date_default_timezone_set('America/Argentina/Buenos_Aires');
 

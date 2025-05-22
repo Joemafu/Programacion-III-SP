@@ -2,8 +2,8 @@
 
 use function PHPSTORM_META\type;
 
-require_once './models/Venta.php';
-require_once './interfaces/IApiUsable.php';
+require_once __DIR__ . '/../models/Venta.php';
+require_once __DIR__ . '/../interfaces/IApiUsable.php';
 
 class VentaController extends Venta implements IApiUsable
 {
